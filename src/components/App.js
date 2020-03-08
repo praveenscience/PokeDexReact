@@ -11,15 +11,18 @@ const App = () => {
   const [Pokemons, setPokemons] = useState({});
   useEffect(() => {
     GetInitialPokemons().then(res => {
+      const PokeId = p =>
+        +p.url
+          .replace("https://pokeapi.co/api/v2/pokemon/", "")
+          .replace("/", "");
       setList(
         res.data.results.map(p => ({
           Name: p.name,
           Image:
             "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-            +p.url
-              .replace("https://pokeapi.co/api/v2/pokemon/", "")
-              .replace("/", "") +
-            ".png"
+            PokeId(p) +
+            ".png",
+          Link: "/" + PokeId(p)
         }))
       );
       if (res.data.previous) {

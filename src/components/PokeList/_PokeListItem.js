@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Default from "../../assets/icons/default.png";
 
-const PokeListItem = ({ Name, Image, Link }) => {
+const PokeListItem = ({ Name, Image, Link: URL }) => {
   Image = Image ? Image : Default;
   return (
-    <a
-      href={Link}
+    <Link
+      to={URL}
       className="PokeListItem list-group-item list-group-item-action"
     >
       <img src={Image} className="PokeList-Img" alt="" />
       {Name}
-    </a>
+    </Link>
   );
 };
 
