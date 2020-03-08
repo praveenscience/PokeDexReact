@@ -8,6 +8,10 @@ const PokeList = ({ List, Pokemons }) => {
       <ContainerRow fluid={true}>
         <div className="col-12 col-md-6 offset-md-3">
           <h2 className="mb-3">PokemonList</h2>
+          <p>
+            The ones that have a check mark and a different background has the
+            data available offline.
+          </p>
           <div className="list-group">
             {List &&
               List.map((list, key) => (
