@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./Helpers/Header";
 import PokeList from "./PokeList/PokeList";
 import { GetInitialPokemons } from "../services/PokeAPI";
+import Pokemon from "./Pokemon/Pokemon";
 
 const App = () => {
   const [List, setList] = useState([]);
   const [Prev, setPrev] = useState(null);
   const [Next, setNext] = useState(null);
-  const [Pokemons, setPokemons] = useState({});
+  const [Pokemons, setPokemons] = useState([]);
   useEffect(() => {
     GetInitialPokemons().then(res => {
       const PokeId = p =>
@@ -59,12 +60,7 @@ const App = () => {
         />
         <Route
           path="/:pokemon"
-          render={props => (
-            <pre>
-              You're in {props.match.url} and currently looking for the pokemon
-              "{props.match.params.pokemon}".
-            </pre>
-          )}
+          render={props => <Pokemon {...{ ...props, Pokemons, setPokemons }} />}
         />
       </Router>
     </div>
