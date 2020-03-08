@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./Helpers/Header";
+import PokeList from "./PokeList/PokeList";
 
 const App = () => {
+  const [List, setList] = useState([]);
   return (
     <div className="App">
       <Router>
@@ -14,7 +16,7 @@ const App = () => {
         <Route
           path="/"
           exact={true}
-          render={props => <pre>You're in the home page!</pre>}
+          render={props => <PokeList List={List} />}
         />
         <Route
           path="/:pokemon"

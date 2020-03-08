@@ -2,5 +2,6 @@ body {
   font-family: "Open Sans";
   .App {
     @import "Header";
+    @import "PokeList";
   }
 }
