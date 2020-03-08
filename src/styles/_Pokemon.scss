@@ -1,0 +1,20 @@
+.Pokemon {
+  &-Details {
+    h2 {
+      text-transform: capitalize;
+    }
+    h3 {
+      margin-top: 25px;
+    }
+    &-Images {
+      .card- {
+        &title {
+          text-transform: capitalize;
+        }
+        &img-top {
+          height: 310px;
+        }
+      }
+    }
+  }
+}

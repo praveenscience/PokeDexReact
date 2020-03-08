@@ -18,7 +18,11 @@ const Pokemon = ({ match, Pokemons, setPokemons }) => {
       // Somehow cancel the AJAX call!
     };
   });
-  return <>{Pokemons[PokeId] && <PokeDetails Data={Pokemons[PokeId]} />}</>;
+  return (
+    <div className="Pokemon">
+      {Pokemons[PokeId] && <PokeDetails {...{ ...Pokemons[PokeId] }} />}
+    </div>
+  );
 };
 
 export default Pokemon;
