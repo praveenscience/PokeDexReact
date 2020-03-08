@@ -56,7 +56,7 @@ const App = () => {
         <Route
           path="/"
           exact={true}
-          render={props => <PokeList List={List} />}
+          render={() => <PokeList List={List} Pokemons={Pokemons} />}
         />
         <Route
           path="/:pokemon"

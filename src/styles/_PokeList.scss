@@ -6,4 +6,15 @@
     vertical-align: middle;
     margin: -0.75rem 0.75rem -0.75rem -1.25rem;
   }
+  &Item {
+    position: relative;
+    .fa-check-square {
+      position: absolute;
+      font-size: 20pt;
+      right: 15px;
+      top: 50%;
+      margin-top: -10pt;
+      color: #f90;
+    }
+  }
 }
