@@ -1,5 +1,6 @@
 import React from "react";
 import ContainerRow from "../Helpers/ContainerRow";
+import PropItem from "./_PropItem";
 
 const PokeDetails = ({
   abilities,
@@ -23,7 +24,7 @@ const PokeDetails = ({
   return (
     <div className="Pokemon-Details">
       <ContainerRow fluid={true}>
-        <div className="col-12 col-md-6 offset-md-3">
+        <div className="col-12 col-md-6 offset-md-3 mb-5">
           <h2>{name}</h2>
           <h3>Images</h3>
           <div className="row Pokemon-Details-Images">
@@ -42,6 +43,35 @@ const PokeDetails = ({
               </div>
             ))}
           </div>
+          <h3>Stats</h3>
+          <ul className="list-group text-capitalize">
+            {stats &&
+              stats.map((stat, key) => (
+                <PropItem
+                  key={key}
+                  Name={stat.stat.name}
+                  Value={stat.base_stat}
+                />
+              ))}
+          </ul>
+          <h3>Abilities</h3>
+          <ul className="list-group text-capitalize">
+            {abilities &&
+              abilities.map((ability, key) => (
+                <PropItem
+                  key={key}
+                  Name={ability.ability.name}
+                  Value={ability.slot}
+                />
+              ))}
+          </ul>
+          <h3>Movements</h3>
+          <ul className="list-group text-capitalize">
+            {moves &&
+              moves.map((move, key) => (
+                <PropItem key={key} Name={move.move.name} />
+              ))}
+          </ul>
         </div>
       </ContainerRow>
     </div>
