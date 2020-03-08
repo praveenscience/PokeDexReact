@@ -1,6 +1,8 @@
 import React from "react";
+import Default from "../../assets/icons/default.png";
 
 const PokeListItem = ({ Name, Image, Link }) => {
+  Image = Image ? Image : Default;
   return (
     <a
       href={Link}
