@@ -28,20 +28,25 @@ const PokeDetails = ({
           <h2>{name}</h2>
           <h3>Images</h3>
           <div className="row Pokemon-Details-Images">
-            {Object.keys(sprites).map((sprite, key) => (
-              <div className="col-4 mb-4 text-center">
-                <div className="card" key={key}>
-                  <img
-                    src={sprites[sprite]}
-                    className="card-img-top"
-                    alt={sprite}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{sprite.replace(/_/g, " ")}</h5>
+            {Object.keys(sprites).map(
+              (sprite, key) =>
+                sprites[sprite] && (
+                  <div className="col-4 mb-4 text-center">
+                    <div className="card" key={key}>
+                      <img
+                        src={sprites[sprite]}
+                        className="card-img-top"
+                        alt={sprite}
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">
+                          {sprite.replace(/_/g, " ")}
+                        </h5>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                )
+            )}
           </div>
           <h3>Stats</h3>
           <ul className="list-group text-capitalize">
