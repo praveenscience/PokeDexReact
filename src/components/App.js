@@ -1,10 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./Helpers/Header";
 
 const App = () => {
   return (
     <div className="App">
-      <p>Hello CybSafe</p>
+      <Header className="Header" dark={true}>
+        CybSafe Pokedex
+      </Header>
       <Router>
         <Route
           path="/"
