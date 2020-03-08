@@ -24,8 +24,10 @@ const PokeDetails = ({
   return (
     <div className="Pokemon-Details">
       <ContainerRow fluid={true}>
-        <div className="col-12 col-md-6 offset-md-3 mb-5">
+        <div className="col-12">
           <h2>{name}</h2>
+        </div>
+        <div className="col-12 col-md-6 mb-5">
           <h3>Images</h3>
           <div className="row Pokemon-Details-Images">
             {Object.keys(sprites).map(
@@ -48,6 +50,8 @@ const PokeDetails = ({
                 )
             )}
           </div>
+        </div>
+        <div className="col-12 col-md-6 mb-5">
           <h3>Stats</h3>
           <ul className="list-group text-capitalize">
             {stats &&
