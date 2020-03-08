@@ -2,25 +2,7 @@ import React from "react";
 import ContainerRow from "../Helpers/ContainerRow";
 import PropItem from "./_PropItem";
 
-const PokeDetails = ({
-  abilities,
-  base_experience,
-  forms,
-  game_indices,
-  height,
-  held_items,
-  id,
-  is_default,
-  location_area_encounters,
-  moves,
-  name,
-  order,
-  species,
-  sprites,
-  stats,
-  types,
-  weight
-}) => {
+const PokeDetails = ({ abilities, moves, name, sprites, stats }) => {
   return (
     <div className="Pokemon-Details">
       <ContainerRow fluid={true}>
