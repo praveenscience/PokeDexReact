@@ -1,14 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./Helpers/Header";
 
 const App = () => {
   return (
     <div className="App">
-      <Header className="Header" dark={true}>
-        CybSafe Pokedex
-      </Header>
       <Router>
+        <Header className="Header" dark={true}>
+          <Link to="/" title="Go to home page">
+            CybSafe Pokedex
+          </Link>
+        </Header>
         <Route
           path="/"
           exact={true}
