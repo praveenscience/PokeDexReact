@@ -3,6 +3,24 @@
 First of all, welcome! This test will be your way to prove yourself that you are worthy to grab the hammer of Thor!
 > Jokes aside, this our technical test :)
 
+## Solution
+
+### Features
+
+* Caches the calls for already visited pokemons.
+* Shows already visited and offline available pokemons with a checkmark.
+* Uses less HTTP requests and React router.
+
+### Screenshots
+
+The main home page.
+
+![home](./readme/home.png)
+
+The pokedex entry page.
+
+![home](./readme/page.png)
+
 ### Your Challenge
 
 * You will need to create a [pokedex](https://pokemon.fandom.com/wiki/Pok%C3%A9dex) with the help of an api that we will provide.
