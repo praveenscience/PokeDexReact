@@ -7,7 +7,7 @@ First of all, welcome! This test will be your way to prove yourself that you are
 
 ### Features
 
-* Caches the calls for already visited pokemons.
+* Caches the data for already visited pokemons so no extra AJAX calls.
 * Shows already visited and offline available pokemons with a checkmark.
 * Uses less HTTP requests and React router.
 
@@ -20,6 +20,8 @@ The main home page.
 The pokedex entry page.
 
 ![home](./readme/page.png)
+
+## Original Challenge
 
 ### Your Challenge
 
