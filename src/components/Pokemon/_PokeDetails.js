@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContainerRow from "../Helpers/ContainerRow";
 import PropItem from "./_PropItem";
 
 const PokeDetails = ({ abilities, moves, name, sprites, stats }) => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="Pokemon-Details">
       <ContainerRow fluid={true}>
